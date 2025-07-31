@@ -1,7 +1,7 @@
 import { useContext, useEffect } from 'react'
 import { cartContext } from '../../component/Context/CartContext'
 import CartItem from '../../component/CartItem/CartItem'
-import CheckOut from '../../component/checkOut/checkOut';
+import CheckOut from '../../component/CheckOut/CheckOut';
 
 export default function Cart() {
 

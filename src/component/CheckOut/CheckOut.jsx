@@ -4,7 +4,7 @@ import React, { useContext, useState } from 'react'
 import * as Yup from 'yup' 
 import { cartContext } from '../Context/CartContext'
 import { useNavigate } from 'react-router-dom'
-import toast from 'react-hot-toast'
+
 export default function CheckOut({totalPrice}) {
     const {cart , getLoggUserCart} = useContext(cartContext)
     const [pay , setPay] = useState('cash')
@@ -78,7 +78,7 @@ let {data} = await axios.post(`https://ecommerce.routemisr.com/api/v1/orders//${
     }
 );
 console.log(data);
-// toast.success('ابيض عالابيض✅')
+
 if(data.status == "success"){
     navigate('/allorders')
     getLoggUserCart()
@@ -173,11 +173,7 @@ if(data.status == "success"){
                 setPay('cash')
               } }
               className="btn cursor-pointer bg-primary hover:bg-darkPrimary text-white w-full flex py-2 text-nowrap items-center justify-center gap-2" >
-              {/* <img
-                className="size-10"
-                src={cashPaymentImg}
-                alt="Cash Payment Img"
-              /> */}
+
               <span> Cash Order</span>
             </button>
 
@@ -193,11 +189,7 @@ if(data.status == "success"){
               } }
               className="btn cursor-pointer flex py-2 text-nowrap items-center justify-center gap-2 hover:text-white hover:bg-darkPrimary bg-white text-darkPrimary w-full"
             >
-              {/* <img
-                className="size-10 object-cover"
-                src={onlinePaymentImg}
-                alt="Online Payment Img"
-              /> */}
+
               <span>Online Order</span>
             </button>
           </div>
