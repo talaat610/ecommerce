@@ -1,0 +1,41 @@
+@import "tailwindcss";
+@import '@fontsource-variable/outfit';
+@custom-variant dark (&:where(.dark, .dark *));
+
+
+
+@utility container {
+    margin :0 auto ;
+    width: 1300px;
+}
+
+@theme{
+    --color-mainLight   : #F0F3F2 ;
+    --color-primary     : #00CC74 ;  
+    --color-darkPrimary : #01854C ;  
+}
+
+/* start loading */
+
+ .loader {
+    width: 55px;
+    height: 55px;
+    border: 5px dotted #00CC74;
+    border-radius: 50%;
+    display: inline-block;
+    position: relative;
+    box-sizing: border-box;
+    animation: rotation 2s linear infinite;
+  }
+  
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }  
+
+
+
