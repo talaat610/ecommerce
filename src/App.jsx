@@ -20,7 +20,7 @@ import WishlistContextProvider from './component/Context/WishListContex'
 import ForgotPassword          from './pages/ForgrtPassword/ForgrtPassword'
 import ResetPassword           from './pages/ResetPassword/ResetPassword'
 import VeriFayCode             from './pages/VeriFayCode/VeriFayCode'
-import ProtectedRoute from './pages/protected/ProtectedRoute'
+import ProtectedRoute          from './pages/protected/protectedRoute'
 
 
 
