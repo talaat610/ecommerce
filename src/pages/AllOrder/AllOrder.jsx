@@ -31,17 +31,18 @@ export default function AllOrder() {
  orders.map( (order)=> 
   <div key={order.id} className='border-2 border-gray-500/30 bg-mainLight p-10 my-10'>
 
- <div className='flex justify-between'>
+ <div className='flex flex-col gap-5 md:flex-row justify-between'>
+
  <div>
      <h3 className='text-slate-200 py-1  px-2 rounded-md text-l bg-primary'>Order Id : #{order.id}</h3>
  </div>
 
- <div className='flex justify-center '>
- <h2 className='text-slate-200 py-1  px-2 rounded-md text-l bg-primary'>Total Order Price : {order.totalOrderPrice}</h2>
+ <div className='flex justify-center items-start'>
+ <h2 className='text-slate-200 py-1  px-2 rounded-md text-l bg-primary text-center'>Total Price : {order.totalOrderPrice}</h2>
 </div>
 
- <div>
- <button className='py-1 px-2 rounded-md bg-blue-500 mx-4 text-slate-100'>
+ <div className='flex justify-end flex-col items-center'>
+ <button className='py-1 px-2 rounded-md bg-primary mx-4 text-slate-100'>
     {order.isDelivered ? 'DELIVERED' : 'NOT DELIVERED'}
  </button>
  <button className={`py-1 px-2 rounded-md text-slate-100 ${order.isPaid ? 'bg-primary' :' bg-red-500' }`}>
@@ -52,7 +53,7 @@ export default function AllOrder() {
  </div>
  
 
- <div className='grid grid-cols-6 my-4 gap-4'>
+ <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 my-4 gap-4'>
     {order.cartItems.map( (product)=> 
  <div key={product.product.id} className='border-2 border-gray-500/30 '>
  

@@ -19,7 +19,7 @@ useEffect( ()=>{
 <div className='flex justify-between px-3 bg-gray-100 mb-5 rounded-md '>
 
 <div className='p-5 flex  items-centeer  gap-5'>
-  <div><img src={item?.product.imageCover} className='w-[200px]' alt="" /></div>
+  <div><img src={item?.product.imageCover} className='h-[200px] w-[200px] object-cover' alt="" /></div>
   <div><h2 className='font-semibold text-2xl line-clamp-1'>{item?.product.title}</h2><h5>{item?.product.category?.name}</h5></div>
 </div>
 

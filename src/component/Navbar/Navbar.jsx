@@ -17,9 +17,13 @@ export default function Navbar() {
   const baseLinkClass = 'text-xl pb-1.5 relative after:w-0 after:h-0.5 hover:after:w-full after:bg-primary after:absolute after:bottom-0 after:left-0 after:duration-500 cursor-pointer';
 
   return (
-    <div className='bg-mainLight shadow-xl py-6 px-4'>
-      <div className="container mx-auto flex justify-between items-center">
+    <div className=' shadow-xl py-6 px-4'>
+      <div className="container mx-auto ">
       
+      
+      <div className='flex justify-between items-center'>
+
+  
         <div className='flex items-center gap-2'>
           <img src={cartLogo} className='w-[60px]' alt="logo" />
           <h1 className='text-3xl font-bold'>FreshCart</h1>
@@ -38,11 +42,11 @@ export default function Navbar() {
         <ul className='hidden lg:flex gap-x-6 items-center'>
           {token && <>
             <li><NavLink to="/" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Home</NavLink></li>
-            <li><NavLink to="/Products" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Products</NavLink></li>
-            <li><NavLink to="/Category" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Category</NavLink></li>
-            <li><NavLink to="/Brands" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Brands</NavLink></li>
+            <li><NavLink to="/Products"  className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Products</NavLink></li>
+            <li><NavLink to="/Category"  className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Category</NavLink></li>
+            <li><NavLink to="/Brands"    className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>Brands</NavLink></li>
             <li><NavLink to="/allorders" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>All Orders</NavLink></li>
-            <li><NavLink to="/WishList" className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>WishList</NavLink></li>
+            <li><NavLink to="/WishList"  className={({ isActive }) => `${baseLinkClass} ${isActive ? 'text-primary font-bold' : ''}`}>WishList</NavLink></li>
           </>}
 
       
@@ -83,13 +87,13 @@ export default function Navbar() {
       {menuOpen && (
         <div className='lg:hidden mt-4 space-y-4'>
           {token && <>
-            <NavLink to="/" onClick={() => setMenuOpen(false)} className="block text-lg">Home</NavLink>
-            <NavLink to="/Products" onClick={() => setMenuOpen(false)} className="block text-lg">Products</NavLink>
-            <NavLink to="/Category" onClick={() => setMenuOpen(false)} className="block text-lg">Category</NavLink>
-            <NavLink to="/Brands" onClick={() => setMenuOpen(false)} className="block text-lg">Brands</NavLink>
-            <NavLink to="/allorders" onClick={() => setMenuOpen(false)} className="block text-lg">All Orders</NavLink>
-            <NavLink to="/WishList" onClick={() => setMenuOpen(false)} className="block text-lg">WishList</NavLink>
-            <NavLink to="/Cart" onClick={() => setMenuOpen(false)} className="block text-lg">Cart ({cart?.numOfCartItems || 0})</NavLink>
+            <NavLink to="/" onClick={() => setMenuOpen(false)} className="block text-lg">Home                </NavLink>
+            <NavLink to="/Products"  onClick={() => setMenuOpen(false)} className="block text-lg">Products   </NavLink>
+            <NavLink to="/Category"  onClick={() => setMenuOpen(false)} className="block text-lg">Category   </NavLink>
+            <NavLink to="/Brands"    onClick={() => setMenuOpen(false)} className="block text-lg">Brands     </NavLink>
+            <NavLink to="/allorders" onClick={() => setMenuOpen(false)} className="block text-lg">All Orders </NavLink>
+            <NavLink to="/WishList"  onClick={() => setMenuOpen(false)} className="block text-lg">WishList   </NavLink>
+            <NavLink to="/Cart"      onClick={() => setMenuOpen(false)} className="block text-lg">Cart ({cart?.numOfCartItems || 0})</NavLink>
             <div onClick={() => { logout(); setMenuOpen(false); }} className=" text-lg text-red-500 flex items-center gap-2 cursor-pointer">
               <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
                 strokeWidth={1.5} stroke="currentColor" className="w-5 h-5">
@@ -109,6 +113,8 @@ export default function Navbar() {
           </>}
         </div>
       )}
+
+</div>
     </div>
   );
 }

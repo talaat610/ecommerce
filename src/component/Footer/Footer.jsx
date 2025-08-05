@@ -9,8 +9,10 @@ import google      from '../../assets/images/get-google-play.png'
 
 export default function Footer() {
   return (
+
+
 <footer className='bg-mainLight py-8'>
-  <div className="container grid gap-6">
+  <div className="container grid gap-6 px-3 ">
 
     <div>
       <h3 className='text-2xl'>Get the Fresh Cart App</h3>
@@ -18,13 +20,10 @@ export default function Footer() {
     </div>
 
 
-    <div className='flex flex-col sm:flex-row items-stretch gap-3'>
+    <div className='flex gap-3 flex-col sm:flex-row'>
       <input
-        className='bg-white rounded-md grow py-2 px-3 outline-0'
-        type="text"
-        placeholder='Search...'
-      />
-      <button className='bg-primary text-white px-4 py-2 rounded-md cursor-pointer'>
+        className='bg-white rounded-md grow py-2 px-3 outline-0' type="text" placeholder='Search...'/>
+      <button className='bg-primary  text-white px-10  py-2 rounded-md cursor-pointer'>
         Share App Link
       </button>
     </div>

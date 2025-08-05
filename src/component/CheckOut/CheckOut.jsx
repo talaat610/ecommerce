@@ -61,9 +61,6 @@ if(data.status == "success"){
         }
       }
 
-
-
-
       async function payCash(values){
         try{
 

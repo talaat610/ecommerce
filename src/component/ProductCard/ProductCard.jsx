@@ -12,20 +12,17 @@ export default function ProductCard({ item  }) {
   return (
     <>
 
-      <article
-        data-aos="fade-up"
-        data-aos-duration="500"
-        className="productCard group flex flex-col gap-3  shadow-2xl rounded-xl overflow-hidden">
-        <header className="relative">
-          <img src={item.imageCover} className="w-full" alt={item.title} />
+  
+{/* translate-y-1/2 */}
 
-          <div className="layer translate-y-1/2  flex justify-center items-center gap-4 absolute top-1/2 left-1/2  -translate-x-1/2">
-           
-           
-           
-           
+     <article data-aos="fade-up" data-aos-duration="500"
+        className="productCard group mt-10 flex flex-col gap-3 mx-10 md:mx-0 shadow-2xl rounded-xl overflow-hidden">
+        <header className="relative">
+          <img src={item.imageCover} className="max-w[100%]" alt={item.title} />
+
+          <div className="layer   flex justify-center items-center gap-1 md:gap-3 absolute top-1/2 left-1/2 -translate-x-1/2">
+ 
             <div>
-      
         <button onClick={() => addToWishlist(item.id)}
               className="icon opacity-0 icon-btn translate-y-20 group-hover:translate-y-0 group-hover:opacity-100  hover:bg-darkPrimary duration-300 cursor-pointer bg-primary flex justify-center items-center size-12 bg-opacity-70 rounded-full text-white">
               <svg
@@ -58,32 +55,33 @@ export default function ProductCard({ item  }) {
                 />
               </svg>
             </div>
+           
+            <div>
+              <Link to={`/productsDetails/${item._id}`}
+                className="icon opacity-0 translate-y-20 group-hover:translate-y-0 group-hover:opacity-100  hover:bg-darkPrimary duration-1000 cursor-pointer bg-primary flex justify-center items-center size-12 bg-opacity-70 rounded-full text-white">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth={1.5}
+                  stroke="currentColor"
+                  className="size-8">
 
-            <Link
-              to={`/productsDetails/${item._id}`}
-              className="icon opacity-0 translate-y-20 group-hover:translate-y-0 group-hover:opacity-100  hover:bg-darkPrimary duration-1000 cursor-pointer bg-primary flex justify-center items-center size-12 bg-opacity-70 rounded-full text-white">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                strokeWidth={1.5}
-                stroke="currentColor"
-                className="size-8"
-                >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z"/>
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"/>
-              </svg>
-            </Link>
-
-          </div>
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M2.036 12.322a1.012 1.012 0 0 1 0-.639C3.423 7.51 7.36 4.5 12 4.5c4.638 0 8.573 3.007 9.963 7.178.07.207.07.431 0 .639C20.577 16.49 16.64 19.5 12 19.5c-4.638 0-8.573-3.007-9.963-7.178Z" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M15 12a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                </svg>
+              </Link>
+            </div>
+         
+            </div>
+           
         </header>
-
 
         <footer className="py-6 px-5">
           <header>
